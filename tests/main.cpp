@@ -26,6 +26,18 @@ int main() {
     std::cout << "REFRESH len=" << p.refresh.value.size()
               << " head=" << head(p.refresh.value)  << "\n";
 
+std::cout <<"Test hash function"<<std::endl;
+std::cout << "hash('1234', 'NaCl') = " << hash_pass("1234", "NaCl") << std::endl;
+std::cout << "hash('1', 'NaCl') = " << hash_pass("1", "NaCl") << std::endl;
+std::cout << "hash('abcd', 'NaCl') = " << hash_pass("abcd", "NaCl") << std::endl;
+
+
+try {
+    auto p2 = auth.login("alex", "1999");  // первый символ '1'
+    std::cout << "ВНИМАНИЕ: login с паролем '1999' прошел!" << std::endl;
+} catch (const std::runtime_error& e) {
+    std::cout << "Пароль '1999' отклонен: " << e.what() << std::endl;
+}
     // Проверка доступа
     try {
         auto uid = store.check_access(p.access.value);

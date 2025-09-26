@@ -1,7 +1,7 @@
 [
 {
-  "directory": "/home/skvotcher/testProject/build/debug",
-  "command": "/usr/bin/g++  -I/home/skvotcher/testProject -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/auth_demo.dir/tests/main.cpp.o -c /home/skvotcher/testProject/tests/main.cpp",
+  "directory": "/home/skvotcher/testProject/build/run",
+  "command": "/usr/bin/g++  -I/home/skvotcher/testProject -O2 -g -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/auth_demo.dir/tests/main.cpp.o -c /home/skvotcher/testProject/tests/main.cpp",
   "file": "/home/skvotcher/testProject/tests/main.cpp",
   "output": "CMakeFiles/auth_demo.dir/tests/main.cpp.o"
 }
